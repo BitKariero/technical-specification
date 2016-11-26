@@ -377,8 +377,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1397083"
-     inkscape:cx="80.575417"
-     inkscape:cy="200.55761"
+     inkscape:cx="-58.495256"
+     inkscape:cy="304.97029"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -400,7 +400,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -944,7 +944,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Gillius ADF No2';-inkscape-font-specification:'Gillius ADF No2';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="221.41566"
+       x="229.41566"
        y="275.53201"
        id="text8095"
        sodipodi:linespacing="125%"
@@ -952,16 +952,16 @@
        inkscape:export-ydpi="94.860001"><tspan
          style="font-weight:normal;text-align:center;text-anchor:middle"
          sodipodi:role="line"
-         x="221.41566"
+         x="229.41566"
          y="275.53201"
-         id="tspan8116"><tspan
+         id="tspan8122"><tspan
    id="tspan8106"
-   style="font-weight:bold;text-align:center;text-anchor:middle">A </tspan>creates a CV and includes the content of each reference</tspan><tspan
+   style="font-weight:bold;text-align:center;text-anchor:middle">A </tspan>creates a CV and includes the content of each reference and the</tspan><tspan
          style="font-weight:normal;text-align:center;text-anchor:middle"
          sodipodi:role="line"
-         x="223.67152"
+         x="231.67152"
          y="294.28201"
-         id="tspan8122"> and the address of the smart contract for them  </tspan></text>
+         id="tspan4848">address of the smart contract with the reference hash for them  </tspan></text>
     <g
        id="g9209"
        transform="translate(37.476659,-7.0710678)">
