@@ -14,7 +14,7 @@ Creating a profile and grounding its identity
 
 To create a profile, a user must generate a public/private key-pair. The public key is hashed to obtain a profile *address*, which is used to refer to the profile. The private key is used to control the profile.
 
-Before being able to request references from others, a user has to self-attach a reference that grounds their identity.
+Before being able to request references from others, a user has to self-attach a reference that grounds their identity. This can be done *only once*.
 
 <span>max width=</span>
 
@@ -47,6 +47,11 @@ To have their identity grounded by an IdP, users must provide proof of their rea
 
 For easier use in practice, the profile management software can be shipped with a set of predefined trusted IdPs.
 
+Changing identities
+-------------------
+
+If a user wants to change a part of their attached identity (e.g. they have changed their surname), an IdP has to check that the old and new identities refer to the same person.
+
 Attaching records to profiles
 =============================
 
@@ -63,6 +68,13 @@ Records are implemented as smart contracts. To request a reference or endorsemen
 To provide the reference, **B** calls the `addReference()` method of the contract and passes it a hash of the reference’s content. Through external means (e.g. via e-mail), **B** sends **A** the content of the reference and discloses a part of their identity (e.g., `value` and `salt` of their name). **A** stores this information for later use.
 
 The system is extensible, so different smart contracts can be deployed for different types of records: certificates, employment records, professional association membership, school transcripts, etc.
+
+Floating records
+----------------
+
+A *floating record* is attached directly to a real-life identity, rather than to a profile. Using floating records, organisations can emit certificates for people who haven’t yet created a profile.
+
+To claim a floating record, a user has to prove that their profile’s grounded identity is the same as the record’s.
 
 Publishing verifiable CVs
 =========================

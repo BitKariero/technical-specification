@@ -52,7 +52,7 @@
 \setdefaultlanguage{english}
 
 \title{Technical specification}
-\subtitle{Version 0.1}
+\subtitle{Version 0.2}
 \date{}
 
 \bibliography{bibliography}
@@ -75,7 +75,7 @@ The records attached to profiles, stored in the blockchain, do not include the a
 
 To create a profile, a user must generate a public/private key-pair. The public key is hashed to obtain a profile \emph{address}, which is used to refer to the profile. The private key is used to control the profile.
 
-Before being able to request references from others, a user has to self-attach a reference that grounds their identity.
+Before being able to request references from others, a user has to self-attach a reference that grounds their identity. This can be done \emph{only once}.
 
 \vspace{2.5mm}
 \begin{adjustbox}{max width=\textwidth}
@@ -111,6 +111,10 @@ To have their identity grounded by an IdP, users must provide proof of their rea
 
 For easier use in practice, the profile management software can be shipped with a set of predefined trusted IdPs.
 
+\subsection{Changing identities}
+
+If a user wants to change a part of their attached identity (e.g. they have changed their surname), an IdP has to check that the old and new identities refer to the same person.
+
 \section{Attaching records to profiles}
 
 Records are implemented as smart contracts. To request a reference or endorsement, a user (\textbf{A}) creates a smart contract that the referee (\textbf{B}) can add to. For example:
@@ -137,6 +141,12 @@ Records are implemented as smart contracts. To request a reference or endorsemen
 To provide the reference, \textbf{B} calls the \texttt{addReference()} method of the contract and passes it a hash of the reference's content. Through external means (e.g. via e-mail), \textbf{B} sends \textbf{A} the content of the reference and discloses a part of their identity (e.g., \texttt{value} and \texttt{salt} of their name). \textbf{A} stores this information for later use.
 
 The system is extensible, so different smart contracts can be deployed for different types of records: certificates, employment records, professional association membership, school transcripts, etc.
+
+\subsection{Floating records}
+
+A \emph{floating record} is attached directly to a real-life identity, rather than to a profile. Using floating records, organisations can emit certificates for people who haven't yet created a profile.
+
+To claim a floating record, a user has to prove that their profile's grounded identity is the same as the record's.
 
 \section{Publishing verifiable CVs}
 

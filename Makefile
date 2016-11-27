@@ -5,7 +5,8 @@ markdown: technical-spec.tex
 
 pdf: technical-spec.tex
 	xelatex -synctex=1 -interaction=nonstopmode technical-spec.tex
-	rm *.aux *.bcf *.log *.out *.run.xml *.synctex.gz
+	rm -f *.aux *.bcf *.log *.out *.run.xml *.synctex.gz
 
 clean:
-	rm *.md *.pdf
+	rm -f *.aux *.bcf *.log *.out *.run.xml *.synctex.gz
+	rm -f *.md *.pdf
