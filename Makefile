@@ -5,7 +5,7 @@ markdown: technical-spec.tex
 
 pdf: technical-spec.tex
 	xelatex -synctex=1 -interaction=nonstopmode technical-spec.tex
-	rm *.aux *.bcf *.log *.out *.run.xml *.synctex.gz
+	rm -f *.aux *.bcf *.log *.out *.run.xml *.synctex.gz
 
 diagramspdf: 
 	 (echo diagrams/creating-profile.svg --export-pdf=1.pdf; echo diagrams/request_ref.svg --export-pdf=2.pdf; echo diagrams/floating_ref.svg --export-pdf=3.pdf; echo diagrams/create_cv.svg --export-pdf=4.pdf) | inkscape --shell
@@ -14,5 +14,5 @@ diagramspdf:
 
 
 clean:
-	rm *.md *.pdf
-
+	rm -f *.aux *.bcf *.log *.out *.run.xml *.synctex.gz
+	rm -f *.md *.pdf
